@@ -1,0 +1,198 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="films" type="filmsType">
+        <xs:key name="id">
+            <xs:selector xpath="./acteurDescription" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:keyref name="ref" refer="id">
+            <xs:selector xpath="./film/acteurs/acteur" />
+            <xs:field xpath="@ref" />
+        </xs:keyref>
+    </xs:element>
+
+    <xs:complexType name="filmsType">
+        <xs:sequence>
+            <xs:element name="film" type="filmType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="acteurDescription" type="descriptionType" minOccurs="0"
+                maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="descriptionType">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string" />
+            <xs:element name="prenom" type="xs:string" />
+            <xs:element name="dateNaissance" type="dateType" />
+            <xs:element name="sexe" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="dateType">
+        <xs:simpleContent>
+            <xs:extension base="xs:date">
+                <xs:attribute name="lieuNaissance" type="xs:string" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="filmType">
+        <xs:sequence>
+            <xs:element name="titre" type="titreType" />
+            <xs:element name="exploitation" type="exploitationType" />
+            <xs:element name="image" type="imageType" />
+        </xs:sequence>
+        <xs:attribute name="annee" type="xs:positiveInteger" />
+        <xs:attribute name="visa" type="xs:positiveInteger" />
+        <xs:attribute name="nationalite" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="titreType">
+        <xs:sequence></xs:sequence>
+        <xs:attribute name="nom" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="imageType">
+        <xs:sequence></xs:sequence>
+        <xs:attribute name="ref" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="exploitationType">
+        <xs:sequence>
+            <xs:element name="dateSalle" type="xs:string" />
+            <xs:element name="nbEntrees" type="xs:positiveInteger" />
+            <xs:element name="nbSalles" type="xs:positiveInteger" />
+            <xs:element name="acteurs" type="acteursType" />
+            <xs:element name="realisateur" type="realisateurType" />
+            <xs:element name="genres" type="genresType" />
+            <xs:element name="duree" type="xs:positiveInteger" />
+            <xs:element name="scenario" type="scenarioType" />
+            <xs:element name="listePays" type="listeType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="acteursType">
+        <xs:sequence>
+            <xs:element name="acteur" type="acteurType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="acteurType">
+        <xs:sequence></xs:sequence>
+        <xs:attribute name="ref" type="xs:string" />
+        <xs:attribute name="nom" type="xs:string" />
+        <xs:attribute name="prenom" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="realisateurType">
+        <xs:sequence></xs:sequence>
+        <xs:attribute name="nom" type="xs:string" />
+        <xs:attribute name="prenom" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="genresType">
+        <xs:sequence>
+            <xs:element name="genre" type="genretype" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="genretype">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="action" />
+            <xs:enumeration value="aventure" />
+            <xs:enumeration value="anticipation" />
+            <xs:enumeration value="casse" />
+            <xs:enumeration value="catastrophe" />
+            <xs:enumeration value="cape et epee" />
+            <xs:enumeration value="noel" />
+            <xs:enumeration value="comedie" />
+            <xs:enumeration value="drame" />
+            <xs:enumeration value="fantastique" />
+            <xs:enumeration value="fantasy" />
+            <xs:enumeration value="horreur" />
+            <xs:enumeration value="historique" />
+            <xs:enumeration value="opera" />
+            <xs:enumeration value="peplum" />
+            <xs:enumeration value="romance" />
+            <xs:enumeration value="science-fiction" />
+            <xs:enumeration value="thriller" />
+            <xs:enumeration value="western" />
+            <xs:enumeration value="animation" />
+            <xs:enumeration value="famille" />
+            <xs:enumeration value="biopic" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="scenarioType" mixed="true">
+        <xs:choice maxOccurs="unbounded">
+            <xs:element name="keyword" type="xs:string" minOccurs="0" />
+            <xs:element name="perso" type="xs:string" minOccurs="0" />
+            <xs:element name="ev" type="xs:string" minOccurs="0" />
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="listeType">
+        <xs:sequence>
+            <xs:element name="pays" type="paysType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="paysType">
+        <xs:sequence></xs:sequence>
+        <xs:attribute name="nom" type="nomPays" />
+    </xs:complexType>
+    <xs:simpleType name="nomPays">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Angleterre" />
+            <xs:enumeration value="Albanie" />
+            <xs:enumeration value="Allemagne" />
+            <xs:enumeration value="Andorre" />
+            <xs:enumeration value="Arménie" />
+            <xs:enumeration value="Autriche" />
+            <xs:enumeration value="Azerbaïdjan" />
+            <xs:enumeration value="Belgique" />
+            <xs:enumeration value="Biélorussie" />
+            <xs:enumeration value="Bosnie-Herzégovine" />
+            <xs:enumeration value="Bulgarie" />
+            <xs:enumeration value="Chypre" />
+            <xs:enumeration value="Croatie" />
+            <xs:enumeration value="Danemark" />
+            <xs:enumeration value="Espagne" />
+            <xs:enumeration value="Estonie" />
+            <xs:enumeration value="Finlande" />
+            <xs:enumeration value="France" />
+            <xs:enumeration value="Géorgie" />
+            <xs:enumeration value="Grèce" />
+            <xs:enumeration value="Hongrie" />
+            <xs:enumeration value="Irlande" />
+            <xs:enumeration value="Islande" />
+            <xs:enumeration value="Italie" />
+            <xs:enumeration value="Kazakhstan" />
+            <xs:enumeration value="Kosovo" />
+            <xs:enumeration value="Lettonie" />
+            <xs:enumeration value="Liechtenstein" />
+            <xs:enumeration value="Lituanie" />
+            <xs:enumeration value="Luxembourg" />
+            <xs:enumeration value="Malte" />
+            <xs:enumeration value="Moldavie" />
+            <xs:enumeration value="Monaco" />
+            <xs:enumeration value="Monténégro" />
+            <xs:enumeration value="Norvège" />
+            <xs:enumeration value="Pays-Bas" />
+            <xs:enumeration value="Pologne" />
+            <xs:enumeration value="Portugal" />
+            <xs:enumeration value="République tchèque" />
+            <xs:enumeration value="Roumanie" />
+            <xs:enumeration value="Royaume-Uni" />
+            <xs:enumeration value="Russie" />
+            <xs:enumeration value="Saint-Marin" />
+            <xs:enumeration value="Serbie" />
+            <xs:enumeration value="Slovaquie" />
+            <xs:enumeration value="Slovénie" />
+            <xs:enumeration value="Suède" />
+            <xs:enumeration value="Suisse" />
+            <xs:enumeration value="Ukraine" />
+            <xs:enumeration value="Vatican" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

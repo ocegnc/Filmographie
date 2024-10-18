@@ -1,0 +1,226 @@
+<?xml-stylesheet href="filmographie.xsl" type="text/xsl" ?>
+
+<!--
+    <?xml version="1.0" encoding="utf-8"?>
+    DOCTYPE films SYSTEM "filmographie.dtd" 
+-->
+<!--
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="filmSchema.xsd"
+-->
+<films xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="filmSchema.xsd">
+
+    <film annee="2005" visa="114089" nationalite="américain">
+        <titre nom="King Kong" />
+        <exploitation>
+            <dateSalle>14 décembre 2005</dateSalle>
+            <nbEntrees>2838759</nbEntrees>
+            <nbSalles>547</nbSalles>
+            <acteurs>
+                <acteur ref="a1" nom="Jackson" prenom="Peter" />
+                <acteur ref="a2" nom="Watts" prenom="Naomi" />
+                <acteur ref="a3" nom="Black" prenom="Jack" />
+                <acteur ref="a4" nom="Brody" prenom="Adrien" />
+            </acteurs>
+            <realisateur nom="Jackson" prenom="Peter" />
+            <genres>
+                <genre>aventure</genre>
+            </genres>
+            <duree>188</duree>
+            <scenario>
+                <ev>New York</ev>, <ev>1933</ev>. Artiste de music-hall à la rue, <perso>Ann Darrow</perso> rencontre l'audacieux explorateur/réalisateur <perso>Carl
+                Denham</perso>. Ce dernier rêve de terminer son lm inachevé, mais nourrit surtout la folle ambition d'être le premier à
+                découvrir le secret de la mystérieuse <keyword>Skull Island</keyword>. Il va entraîner Ann dans sa périlleuse aventure...
+            </scenario>
+            <listePays>
+                <pays nom="France" />
+                <pays nom="Espagne" />
+                <pays nom="Italie" />
+                <pays nom="Angleterre" />
+            </listePays>
+        </exploitation>
+        <image ref="kingKong.jpg" />
+    </film>
+
+    <film annee="2017" visa="121212" nationalite="américain">
+        <titre nom="Jumanji : Bienvenue dans la jungle" />
+        <exploitation>
+            <dateSalle>20 décembre 2017</dateSalle>
+            <nbEntrees>3372996</nbEntrees>
+            <nbSalles>800</nbSalles>
+            <acteurs>
+                <acteur ref="a5" nom="Hart" prenom="Kevin" />
+                <acteur ref="a6" nom="Johnson" prenom="Dwayne" />
+                <acteur ref="a3" nom="Black" prenom="Jack" />
+                <acteur ref="a7" nom="Gillan" prenom="Karen" />
+            </acteurs>
+            <realisateur nom="Kasdan" prenom="Jake" />
+            <genres>
+                <genre>fantastique</genre>
+                <genre>action</genre>
+            </genres>
+            <duree>119</duree>
+            <scenario>
+                Le destin de <keyword>quatre lycéens</keyword> en retenue bascule lorsqu’ils sont aspirés dans le monde de <keyword>Jumanji</keyword>. Après avoir découvert une vieille console contenant un <keyword>jeu vidéo</keyword> dont ils n’avaient jamais entendu parler, les quatre jeunes se retrouvent mystérieusement propulsés au cœur de la jungle de Jumanji, <ev>dans le corps de leurs avatars</ev>. Ils vont rapidement découvrir que l’on ne joue pas à Jumanji, c’est le jeu qui joue avec vous… Pour revenir dans le monde réel, il va leur falloir affronter les pires dangers et triompher de l’ultime aventure. Sinon, ils resteront à jamais <ev>prisonniers</ev> de Jumanji…
+            </scenario>
+            <listePays>
+                <pays nom="France" />
+                <pays nom="Espagne" />
+                <pays nom="Allemagne" />
+                <pays nom="Pays-Bas" />
+            </listePays>
+        </exploitation>
+        <image ref="jumanji.jpg" />
+    </film>
+
+    <film annee="2023" visa="060708" nationalite="américain">
+        <titre nom="The Marvels" />
+        <exploitation>
+            <dateSalle>8 novembre 2023</dateSalle>
+            <nbEntrees>150064798</nbEntrees>
+            <nbSalles>1500</nbSalles>
+            <acteurs>
+                <acteur ref="a8" nom="Larson" prenom="Brie" />
+                <acteur ref="a9" nom="Thompson" prenom="Tessa" />
+                <acteur ref="a10" nom="Lynch" prenom="Lashana" />
+                <acteur ref="a11" nom="Jackson" prenom="Samuel L." />
+            </acteurs>
+            <realisateur nom="Da Costa" prenom="Nia" />
+            <genres>
+                <genre>action</genre>
+                <genre>aventure</genre>
+                <genre>fantastique</genre>
+                <genre>science-fiction</genre>
+            </genres>
+            <duree>105</duree>
+            <scenario>
+                <perso>Carol Danvers</perso>, alias <perso>Captain Marvel</perso>, doit faire face aux conséquences imprévues de sa victoire contre les <perso>Krees</perso>. Des effets inattendus l’obligent désormais à assumer le fardeau d'un <ev>univers déstabilisé</ev>. Au cours d’une mission qui la propulse au sein d’un étrange vortex étroitement lié aux actions d’une révolutionnaire Kree, ses pouvoirs se mêlent à ceux de <perso>Kamala Khan</perso> - alias <perso>Miss Marvel</perso>, sa super-fan de Jersey City - et à ceux de sa « nièce », la <perso>Capitaine Monica Rambeau</perso>, désormais astronaute au sein du S.A.B.E.R. D’abord chaotique, ce <ev>trio improbable</ev> se retrouve bientôt obligé de faire équipe et d’apprendre à travailler de concert pour sauver l'univers. Un seul nom pour cela : <keyword>"The Marvels" !</keyword>
+            </scenario>
+            <listePays>
+                <pays nom="France" />
+                <pays nom="Espagne" />
+                <pays nom="Angleterre" />
+                <pays nom="Suède" />
+            </listePays>
+        </exploitation>
+        <image ref="marvels.jpg" />
+    </film>
+
+    <film annee="2023" visa="101010" nationalite="américain">
+        <titre nom="Gardiens de la galaxie 3" />
+        <exploitation>
+            <dateSalle>3 mai 2023</dateSalle>
+            <nbEntrees>323189452</nbEntrees>
+            <nbSalles>3000</nbSalles>
+            <acteurs>
+                <acteur ref="a7" nom="Gillan" prenom="Karen" />
+                <acteur ref="a12" nom="Pratt" prenom="Chris" />
+                <acteur ref="a13" nom="Saldana" prenom="Zoe" />
+                <acteur ref="a14" nom="Diesel" prenom="Vin" />
+            </acteurs>
+            <realisateur nom="Gunn" prenom="James" />
+            <genres>
+                <genre>action</genre>
+                <genre>fantastique</genre>
+                <genre>science-fiction</genre>
+            </genres>
+            <duree>150</duree>
+            <scenario>
+                <ev>Notre bande de marginaux</ev> favorite a quelque peu changé. <perso>Peter Quill</perso>, qui pleure toujours la perte de <perso>Gamora</perso>, doit rassembler son équipe pour <ev>défendre l’univers</ev> et protéger l’un des siens. En cas d’échec, cette mission pourrait bien marquer la fin des <keyword>Gardiens</keyword> tels que nous les connaissons.
+            </scenario>
+            <listePays>
+                <pays nom="France" />
+                <pays nom="Pays-Bas" />
+                <pays nom="Italie" />
+                <pays nom="Norvège" />
+            </listePays>
+        </exploitation>
+        <image ref="gardiensGalaxie3.jpg" />
+    </film>
+
+    <acteurDescription id="a1">
+        <nom>Jackson</nom>
+        <prenom>Peter</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>M</sexe>
+    </acteurDescription>
+    <acteurDescription id="a2">
+        <nom>Watts</nom>
+        <prenom>Naomi</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>F</sexe>
+    </acteurDescription>
+    <acteurDescription id="a3">
+        <nom>Black</nom>
+        <prenom>Jack</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>M</sexe>
+    </acteurDescription>
+    <acteurDescription id="a4">
+        <nom>Brody</nom>
+        <prenom>Adam</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>M</sexe>
+    </acteurDescription>
+    <acteurDescription id="a5">
+        <nom>Hart</nom>
+        <prenom>Kevin</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>M</sexe>
+    </acteurDescription>
+    <acteurDescription id="a6">
+        <nom>Johnson</nom>
+        <prenom>Dwayne</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>M</sexe>
+    </acteurDescription>
+    <acteurDescription id="a7">
+        <nom>Gillan</nom>
+        <prenom>Karen</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>F</sexe>
+    </acteurDescription>
+    <acteurDescription id="a8">
+        <nom>Larson</nom>
+        <prenom>Brie</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>F</sexe>
+    </acteurDescription>
+    <acteurDescription id="a9">
+        <nom>Thompson</nom>
+        <prenom>Tessa</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>F</sexe>
+    </acteurDescription>
+    <acteurDescription id="a10">
+        <nom>Lynch</nom>
+        <prenom>Lashana</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>F</sexe>
+    </acteurDescription>
+    <acteurDescription id="a11">
+        <nom>Jackson</nom>
+        <prenom>Samuel L.</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>M</sexe>
+    </acteurDescription>
+    <acteurDescription id="a12">
+        <nom>Pratt</nom>
+        <prenom>Chris</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>M</sexe>
+    </acteurDescription>
+    <acteurDescription id="a13">
+        <nom>Saldana</nom>
+        <prenom>Zoe</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>F</sexe>
+    </acteurDescription>
+    <acteurDescription id="a14">
+        <nom>Diesel</nom>
+        <prenom>Vin</prenom>
+        <dateNaissance lieuNaissance="Los Angeles">1980-01-01</dateNaissance>
+        <sexe>M</sexe>
+    </acteurDescription>
+</films>
